@@ -39,6 +39,15 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wm_l
     'settings' => 'wm_logo',
 ) ) );
 
+$wp_customize->add_setting( 'wm_logo_width' );
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wm_logo_width', array(
+    'label'    => __( 'Logo', 'wm' ),
+    'section'  => 'wm_header_section',
+    'settings' => 'wm_logo_width',
+	'type' => 'text'
+	'' => ''
+) ) );
+
 $wp_customize->add_setting( 'show-title' );
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'show-title', array(
     'label'    => __( 'Show title?', 'wm' ),
